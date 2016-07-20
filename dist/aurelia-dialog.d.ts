@@ -177,6 +177,7 @@ export declare class DialogService {
      * @return Promise A promise that settles when the dialog is closed.
      */
   open(settings?: Object): Promise<DialogResult>;
+  openc(settings?: Object): Promise<DialogController>;
 }
 
 /**

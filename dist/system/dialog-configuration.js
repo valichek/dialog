@@ -70,7 +70,10 @@ System.register(['./renderer', './dialog-renderer', './dialog-options', 'aurelia
           this.resources.forEach(function (resourceName) {
             return _this.aurelia.globalResources(resources[resourceName]);
           });
-          DOM.injectStyles(this.cssText);
+
+          if (this.cssText) {
+            DOM.injectStyles(this.cssText);
+          }
         };
 
         return DialogConfiguration;

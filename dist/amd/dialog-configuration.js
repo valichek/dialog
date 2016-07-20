@@ -62,7 +62,10 @@ define(['exports', './renderer', './dialog-renderer', './dialog-options', 'aurel
       this.resources.forEach(function (resourceName) {
         return _this.aurelia.globalResources(resources[resourceName]);
       });
-      _aureliaPal.DOM.injectStyles(this.cssText);
+
+      if (this.cssText) {
+        _aureliaPal.DOM.injectStyles(this.cssText);
+      }
     };
 
     return DialogConfiguration;

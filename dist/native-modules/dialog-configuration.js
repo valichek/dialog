@@ -59,7 +59,10 @@ export var DialogConfiguration = function () {
     this.resources.forEach(function (resourceName) {
       return _this.aurelia.globalResources(resources[resourceName]);
     });
-    DOM.injectStyles(this.cssText);
+
+    if (this.cssText) {
+      DOM.injectStyles(this.cssText);
+    }
   };
 
   return DialogConfiguration;
